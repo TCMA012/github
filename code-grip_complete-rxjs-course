@@ -1,0 +1,47 @@
+cdm
+cd rxjs/code-grip_complete-rxjs-course/
+
+? cd rxjs/code-grip_complete-rxjs-course/complete-rxjs-course-main
+
+git clone <url> --branch <branch> --single-branch <folder>
+git clone https://github.com/code-grip/complete-rxjs-course --branch main main
+
+svelte
+
+cd main
+git branch -r
+git branch -r > ../branchr
+
+
+
+cdm
+cd rxjs/code-grip_complete-rxjs-course/
+
+sed -e 's#  origin/##' -e '/HEAD/d' branchr > branchr2
+sed -e '/main/d' branchr2 > branchr3
+
+ghub="https://github.com/code-grip/complete-rxjs-course"
+
+
+
+?
+while read line; do
+  echo "git clone $ghub --branch $line $line"
+done < branchr3
+?
+
+while read line; do
+    echo "/media/tcma/SeagateBackupPlusDrive/linux/curl_download_single_zip_arguments.sh https://github.com/code-grip/complete-rxjs-course $line"
+    /media/tcma/SeagateBackupPlusDrive/linux/curl_download_single_zip_arguments.sh https://github.com/code-grip/complete-rxjs-course $line
+done < branchr3
+
+
+
+
+    const activity1$ = fromFetch("https://www.boredapi.com/api/activity?key=5881028", {
+        selector: (response) => response.json(),
+    });
+
+
+
+concatMap switchMap mergeMap

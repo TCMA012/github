@@ -1,0 +1,113 @@
+Visual Studio Code push to github
+Open the Visual studio code and open the folder which you want to push. After that, click on the “Source Control icon” and click on 
+“Initialize Repository.”
+
+https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
+
+https://www.sachinsf.com/how-to-push-the-code-from-vs-code-to-github/
+https://stackoverflow.com/questions/38349811/how-to-git-push-to-a-different-branch-with-visual-studio-code
+https://codingcampus.net/how-to-push-code-from-visual-studio-code-to-github/
+
+cdm
+
+mkdir -p angularDeborahKurata
+
+? cd angularDeborahKurata/
+
+cd angularDeborahKurata
+
+
+
+git init
+
+
+gh repo create angularDeborahKurata --public --source=. --remote=upstream
+
+
+
+
+git remote add origin https://github.com/TCMA012/angularDeborahKurata.git
+
+
+? git remote rm origin
+
+
+git remote set-url origin https://TCMA012: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@github.com/TCMA012/angularDeborahKurata.git
+
+
+git add Angular-Signals/DeborahK_Angular-Signals
+
+ 
+
+warning: adding embedded git repository: rxjs_in_x_lessons
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint: 
+hint: 	git submodule add <url> rxjs_in_x_lessons
+hint: 
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint: 
+hint: 	git rm --cached rxjs_in_x_lessons
+hint: 
+hint: See "git help submodule" for more information.
+
+
+
+git add *
+
+
+git commit -m "add files"
+
+git commit -a
+
+git add . 
+
+git commit -m "rm files"
+
+    The -M is to rename your branch if you don't want it to be called master
+git branch -M main  
+
+
+touch *
+
+touch */*
+
+
+git push origin main
+
+
+
+git pull
+
+git pull origin main
+
+
+
+fatal: Pathspec 'rxjs_in_x_lessons/rxjs_in_x_lessons.txt' is in submodule 'rxjs_in_x_lessons'
+git fatal: Pathspec '' is in submodule ''
+
+
+ git rm --cached directory
+ git add directory
+
+
+
+
+
+I wanted to make a subdirectory stop being a git submodule. This worked for me:
+
+$ mv subdir subdir2
+$ git rm --cached subdir
+$ mv subdir2 subdir
+
+mv rxjs_in_x_lessons rxjs_in_x_lessons2
+git rm --cached rxjs_in_x_lessons
+
+
+git add rxjs_in_x_lessons2/*
+
+git add rxjs_in_x_lessons2
+

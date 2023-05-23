@@ -1,0 +1,72 @@
+GitHub CLI or gh
+GitHub CLI create directory
+
+cdm
+
+
+
+cd github
+
+cd testdir
+touch test
+
+gh auth login
+Alternatively, populate the GH_TOKEN environment variable with a GitHub API authentication token.
+
+
+# create a repository interactively
+gh repo create
+
+# create a new remote repository and clone it locally
+gh repo create my-project --public --clone
+
+
+# create a remote repository from the current directory
+gh repo create my-project --private --source=. --remote=upstream
+gh repo create TypeScript2 --public --source=. --remote=upstream
+
+gh repo create testdir --public --source=. --remote=upstream
+
+
+
+GH_TOKEN, GITHUB_TOKEN (in order of precedence): an authentication token for github.com API requests. Setting this avoids being prompted to authenticate and takes precedence over previously stored credentials.
+export GH_TOKEN=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
+
+
+
+# Adding a local repository to GitHub with GitHub CLI
+#In the command line, navigate to the root directory of your project.
+
+#Initialize the local directory as a Git repository.
+cd TypeScript2
+
+git init -b main
+unknown switch `b'
+
+git init
+
+#Stage and commit all the files in your project.
+
+git add . && git commit -m "initial commit"
+
+#To create a repository for your project on GitHub, use the gh repo create subcommand. When prompted, select Push an existing local repository to GitHub and enter the desired name for your repository. If you want your project to belong to an organization instead of your user account, specify the organization name and project name with organization-name/project-name.
+
+#Follow the interactive prompts. To add the remote and push the repository, confirm yes when asked to add the remote and push the commits to the current branch.
+
+#Alternatively, to skip all the prompts, supply the path to the repository with the --source flag and pass a visibility flag (--public, --private, or --internal). For example, gh repo create --source=. --public. Specify a remote with the --remote flag. To push your commits, pass the --push flag. 
+
+
+
+
+    install:
+type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
+&& sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
+&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
+&& sudo apt update \
+&& sudo apt install gh -y
+
+
+
+sudo apt update
+sudo apt install gh

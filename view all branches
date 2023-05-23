@@ -1,0 +1,14 @@
+github CLI "View all branches"
+
+https://github.com/code-grip/complete-rxjs-course/branches
+
+cdm
+cd rxjs/code-grip_complete-rxjs-course/complete-rxjs-course-main
+
+
+To see all remote branch names, run 
+git branch -r
+
+To see all local and remote branches, run 
+git branch -a
+
