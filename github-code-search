@@ -17,6 +17,16 @@ symbol:PropertyDescriptor
 
 
 
+
+Array<T> 
+ReadonlyArray<T>
+
+symbol:Array includes
+src/lib/es2016.array.include.d.ts
+
+
+
+
 ?
 symbol:HTMLElementTagNameMap
 interface HTMLElementTagNameMap
