@@ -9,3 +9,12 @@ declare type PropertyKey = string | number | symbol;
 
 https://github.com/microsoft/TypeScript/blob/670815f768afb613ff2651b16dc4258aeb33a036/src/lib/es5.d.ts#L90
 declare type PropertyKey = string | number | symbol;
+
+
+
+?
+symbol:HTMLElementTagNameMap
+interface HTMLElementTagNameMap
+"interface HTMLElementTagNameMap"
+?
+
