@@ -1,4 +1,5 @@
 https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax
+https://github.blog/2023-05-08-github-code-search-is-generally-available/
 
 
 https://github.com/microsoft/TypeScript/
@@ -9,6 +10,10 @@ declare type PropertyKey = string | number | symbol;
 
 https://github.com/microsoft/TypeScript/blob/670815f768afb613ff2651b16dc4258aeb33a036/src/lib/es5.d.ts#L90
 declare type PropertyKey = string | number | symbol;
+
+
+
+symbol:PropertyDescriptor
 
 
 
